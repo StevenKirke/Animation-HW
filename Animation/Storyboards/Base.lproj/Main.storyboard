@@ -43,21 +43,25 @@
                                                     <constraint firstAttribute="height" constant="120" id="g9t-Mu-Q3f"/>
                                                 </constraints>
                                             </imageView>
+                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vLc-Pt-Vfc">
+                                                <rect key="frame" x="10" y="30" width="354" height="4"/>
+                                                <color key="tintColor" red="0.93725490196078431" green="0.3529411764705882" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                            </progressView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mushroom_SuperMario" translatesAutoresizingMaskIntoConstraints="NO" id="yU1-27-hib">
+                                                <rect key="frame" x="317" y="458" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="7yr-i8-9ee"/>
+                                                    <constraint firstAttribute="height" constant="40" id="xLu-cV-FUE"/>
+                                                </constraints>
+                                            </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bricks" translatesAutoresizingMaskIntoConstraints="NO" id="qLn-Fj-FiO">
                                                 <rect key="frame" x="0.0" y="458" width="374" height="222"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mushroom_SuperMario" translatesAutoresizingMaskIntoConstraints="NO" id="yU1-27-hib">
-                                                <rect key="frame" x="157" y="670" width="60" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="7yr-i8-9ee"/>
-                                                    <constraint firstAttribute="height" constant="60" id="xLu-cV-FUE"/>
-                                                </constraints>
-                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4c-gR-CAn">
-                                                <rect key="frame" x="10" y="801" width="354" height="39"/>
+                                                <rect key="frame" x="10" y="680" width="354" height="140"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parametrs" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ls-Oj-vfQ">
-                                                        <rect key="frame" x="5" y="5" width="344" height="29"/>
+                                                        <rect key="frame" x="10" y="5" width="339" height="130"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -66,8 +70,9 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="6ls-Oj-vfQ" secondAttribute="trailing" constant="5" id="9dS-uV-hgv"/>
-                                                    <constraint firstItem="6ls-Oj-vfQ" firstAttribute="leading" secondItem="w4c-gR-CAn" secondAttribute="leading" constant="5" id="MDl-s8-Xwt"/>
+                                                    <constraint firstItem="6ls-Oj-vfQ" firstAttribute="leading" secondItem="w4c-gR-CAn" secondAttribute="leading" constant="10" id="MDl-s8-Xwt"/>
                                                     <constraint firstAttribute="bottom" secondItem="6ls-Oj-vfQ" secondAttribute="bottom" constant="5" id="c77-54-Npe"/>
+                                                    <constraint firstAttribute="height" constant="140" id="jZB-Ts-9bW"/>
                                                     <constraint firstItem="6ls-Oj-vfQ" firstAttribute="top" secondItem="w4c-gR-CAn" secondAttribute="top" constant="5" id="kqq-nl-xSg"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -77,14 +82,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.62509447150897479" green="0.62509447150897479" blue="0.62509447150897479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <constraints>
-                                            <constraint firstItem="yU1-27-hib" firstAttribute="centerX" secondItem="UoW-px-s7j" secondAttribute="centerX" id="Djl-p8-GtP"/>
-                                            <constraint firstAttribute="bottom" secondItem="w4c-gR-CAn" secondAttribute="bottom" constant="-160" id="EX6-sc-0pf"/>
+                                            <constraint firstAttribute="trailing" secondItem="yU1-27-hib" secondAttribute="trailing" constant="17" id="E4X-Oz-wqF"/>
+                                            <constraint firstItem="qLn-Fj-FiO" firstAttribute="top" secondItem="yU1-27-hib" secondAttribute="bottom" constant="-40" id="Gig-61-ErM"/>
                                             <constraint firstItem="w4c-gR-CAn" firstAttribute="leading" secondItem="UoW-px-s7j" secondAttribute="leading" constant="10" id="Ig8-KT-z0k"/>
                                             <constraint firstItem="qLn-Fj-FiO" firstAttribute="top" secondItem="jD8-Qu-fZD" secondAttribute="bottom" id="Szf-tf-Ww9"/>
+                                            <constraint firstItem="w4c-gR-CAn" firstAttribute="top" secondItem="qLn-Fj-FiO" secondAttribute="bottom" id="XQe-hY-QaG"/>
                                             <constraint firstAttribute="bottom" secondItem="qLn-Fj-FiO" secondAttribute="bottom" id="fX9-Dn-an5"/>
-                                            <constraint firstAttribute="bottom" secondItem="yU1-27-hib" secondAttribute="bottom" constant="-50" id="gzc-ho-uFu"/>
                                             <constraint firstItem="qLn-Fj-FiO" firstAttribute="leading" secondItem="UoW-px-s7j" secondAttribute="leading" id="lBz-2y-EZU"/>
                                             <constraint firstAttribute="trailing" secondItem="qLn-Fj-FiO" secondAttribute="trailing" id="mk5-zg-c3o"/>
                                             <constraint firstItem="jD8-Qu-fZD" firstAttribute="centerX" secondItem="UoW-px-s7j" secondAttribute="centerX" id="olK-ae-xC5"/>
@@ -99,12 +104,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vLc-Pt-Vfc" secondAttribute="trailing" constant="10" id="0Lb-NG-olb"/>
                                     <constraint firstAttribute="bottom" secondItem="Jg3-lV-b47" secondAttribute="bottom" constant="35" id="2TT-Yb-lHP"/>
                                     <constraint firstItem="Jg3-lV-b47" firstAttribute="top" secondItem="UoW-px-s7j" secondAttribute="bottom" constant="35" id="3op-dD-v8j"/>
                                     <constraint firstItem="UoW-px-s7j" firstAttribute="leading" secondItem="eAP-8L-b7q" secondAttribute="leading" id="555-xt-feB"/>
                                     <constraint firstItem="UoW-px-s7j" firstAttribute="top" secondItem="eAP-8L-b7q" secondAttribute="top" id="8sB-f8-1uq"/>
                                     <constraint firstAttribute="trailing" secondItem="UoW-px-s7j" secondAttribute="trailing" id="Rju-0r-q05"/>
                                     <constraint firstItem="Jg3-lV-b47" firstAttribute="leading" secondItem="eAP-8L-b7q" secondAttribute="leading" id="ZDx-c5-cvO"/>
+                                    <constraint firstItem="vLc-Pt-Vfc" firstAttribute="top" secondItem="eAP-8L-b7q" secondAttribute="top" constant="30" id="qzg-Yc-ZiF"/>
+                                    <constraint firstItem="vLc-Pt-Vfc" firstAttribute="leading" secondItem="eAP-8L-b7q" secondAttribute="leading" constant="10" id="xXO-87-vOo"/>
                                     <constraint firstAttribute="trailing" secondItem="Jg3-lV-b47" secondAttribute="trailing" id="yrz-os-AdX"/>
                                 </constraints>
                             </view>
@@ -123,6 +131,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animateProgress" destination="vLc-Pt-Vfc" id="iLj-g5-dTD"/>
                         <outlet property="backgroundImage" destination="7iT-5X-R0d" id="awV-ZA-rJP"/>
                         <outlet property="clickButton" destination="Jg3-lV-b47" id="gp9-cm-Kwh"/>
                         <outlet property="marioImage" destination="jD8-Qu-fZD" id="dgO-cN-b8u"/>
@@ -146,6 +155,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

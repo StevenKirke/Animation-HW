@@ -12,6 +12,7 @@ import Spring
 class ViewController: UIViewController {
     
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var animateProgress: UIProgressView!
     @IBOutlet weak var mushroomImage: UIImageView!
     @IBOutlet weak var clickButton: UIButton!
     @IBOutlet weak var parametrView: UIView!
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeAnimationAction(_ sender: Any) {
+        clickButton.isEnabled = false
         mushroomImage.transform = .identity
         parametrView.transform = .identity
         marioImage.transform = .identity
@@ -49,7 +51,6 @@ class ViewController: UIViewController {
         
         nextAnimation()
         mushroomAnimation()
-        clickButton.isEnabled = false
 
         parametrLabel.text = """
         animation: \(animation.animation)
@@ -60,11 +61,12 @@ class ViewController: UIViewController {
     }
     
     private func nextAnimation() {
-        
         currentAnimationIndex += 1
+        animateProgress.progress = Float(currentAnimationIndex) / Float(animations.count)
         if currentAnimationIndex >= animations.count {
             currentAnimationIndex = 0
         }
+
         let nameAnimation = String(animations[currentAnimationIndex].animation.rawValue)
         clickButton.setTitle(nameAnimation, for: [.normal])
     }
@@ -72,8 +74,12 @@ class ViewController: UIViewController {
     private func mushroomAnimation() {
         UIView.animate(withDuration: 0.5, animations: { [weak self] in
             guard let self = self else { return }
-            self.mushroomImage.transform = CGAffineTransform(translationX: 0.0, y: -150)
-            self.parametrView.transform = CGAffineTransform(translationX: 0.0, y: -160)
+            let mushroomHeight = self.mushroomImage.frame.height
+            let parametrViewHeight = self.parametrView.frame.height
+            self.mushroomImage.transform = CGAffineTransform(translationX: 0.0,
+                                                             y: -mushroomHeight)
+            self.parametrView.transform = CGAffineTransform(translationX: 0.0,
+                                                            y: -parametrViewHeight)
         }) { [weak self] (complited) in
             if complited {
                 self?.hide()
@@ -82,12 +88,17 @@ class ViewController: UIViewController {
     }
     
     private func hide()  {
-        UIView.animate(withDuration: 0.5, delay: 2.0, options: .curveEaseOut, animations: { [weak self] in
+        UIView.animate(withDuration: 0.5,
+                       delay: 2.0,
+                       options: .curveEaseOut,
+                       animations: { [weak self] in
             guard let self = self else { return }
             self.parametrView.transform = .identity
             self.mushroomImage.transform = .identity
-            self.clickButton.isEnabled = true
-        })
+        }) { [weak self] (complited) in
+            if complited {
+                self?.clickButton.isEnabled = true
+            }
+        }
     }
 }
-

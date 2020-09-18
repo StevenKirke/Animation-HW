@@ -24,9 +24,6 @@ class Button: UIButton {
     }
 }
 
+class gradient {
 
-func blurImage(image: UIImageView, view: UIView, effect: UIBlurEffect) {
-    let blurView = UIVisualEffectView(effect: effect)
-    blurView.frame = view.frame
-    image.addSubview(blurView)
 }
